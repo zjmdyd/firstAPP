@@ -1,0 +1,83 @@
+/**app.wxss**/
+
+/*
+  app.wxss 是整个小程序的公共样式表。我们可以在页面组件的 class 属性上直接使用 app.wxss 中声明的样式规则。
+  */
+
+page {
+  background-color: #f1f1f1;
+  height: 100%;
+  font-size: 30rpx;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+/*  自定义提示框  */
+
+.mToast {
+  position: fixed;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  max-width: 400rpx;
+  display: none;
+  opacity: 0;
+  transition: all 0.3s; /*  动画过度效果*/
+  line-height: 1.5em;
+  text-align: center;
+  z-index: 999;
+}
+
+.inputBox {
+  border-bottom: 2rpx solid #ddd;
+  padding: 12rpx;
+  font: italic arial, sans-serif;
+  margin: 20rpx;
+}
+
+.cell {
+  background: #fff;
+  padding: 20rpx;
+  margin-bottom: 2rpx;
+  display: flex;
+}
+
+
+
+/*
+transition语法
+
+transition: property duration timing-function delay 
+
+transition属性是个复合属性，她包括以下几个子属性：
+
+transition-property ：规定设置过渡效果的css属性名称
+transition-duration ：规定完成过渡效果需要多少秒或毫秒
+transition-timing-function ：指定过渡函数，规定速度效果的速度曲线
+transition-delay ：指定开始出现的延迟时间
+默认值分别为：all 0 ease 0 
+
+注：transition-duration 时长为0，不会产生过渡效果
+transition-property: none |all |property;
+
+值为none时，没有属性会获得过渡效果，值为all时，所有属性都将获得过渡效果，值为指定的css属性应用过渡效果，
+
+*/
+
+/*
+background	在一个声明中设置所有的背景属性。
+background-color	设置元素的背景颜色。
+*/

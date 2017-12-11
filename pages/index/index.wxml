@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <button class='nextBtn' bindtap='nextPage'>next</button>
+
+  <view class="usermotto">
+    <text class="user-motto">{{haha}}</text>
+  </view>
+
+  <view wx:for="{{[1, 2, 3, 4, 5]}}" wx:for-index="idx" wx:for-item="itemName">
+    {{'['+idx+']'}} : {{itemName}}
+  </view>
+  <template name="odds">
+    <view> odd </view>
+  </template>
+  <template name="evens">
+    <view> even </view>
+  </template>
+
+  <block wx:for="{{[1, 2, 3, 4, 5]}}">
+    <template is="{{item % 2 == 0 ? 'evens' : 'odds'}}" />
+  </block>
+  <view id="tapTest" data-hi="WeChat" bindtap="tapName"> Click me! </view>
+
+  <view id="outter" bindtap="handleTap1">
+    outer view
+    <view id="middle" catchtap="handleTap2">
+      middle view
+      <view id="inner" bindtap="handleTap3">inner view</view>
+    </view>
+  </view>
+</view>
+
+<!--m1-->
+<wxs module="m1">
+  var msg = "hello world hahah"
+  module.exports.message = msg;
+</wxs>
+<view>{{m1.message}}</view>
+
+<!-- 下面的 getMax 函数，接受一个数组，且返回数组中最大的元素的值 -->
+<wxs module="m2">
+  var getMax = function(array) {
+    var max = undefined;
+    for (var i = 0; i < array.length; ++i) {
+      max = max === undefined ?
+        array[i] :
+        (max >= array[i] ? max : array[i]);
+    }
+    return max;
+  }
+  module.exports.getMax = getMax;
+</wxs>
+<view>{{m2.getMax([1, 3, 4, 8])}}</view>
+
+<!-- exports: 通过该属性，可以对外共享本模块的私有变量与函数。 -->
+<wxs src="./../index/test.wxs" module="tools" />
+<view>{{tools.msg}}</view>
+<view>{{tools.bar(tools.FOO)}}</view>
+
+
+<!-- require函数 -->
+<wxs src="./../index/logic.wxs" module="logic" />
+<!-- <view>{{logic}}</view> -->

@@ -1,0 +1,20 @@
+// require函数,在.wxs模块中引用其他 wxs 文件模块，可以使用 require 函数。
+var tools = require("test.wxs");
+console.log(tools.FOO);
+console.log(tools.bar("logic.wxs"));
+console.log(tools.msg);
+
+var a = 10, b = 20;
+
+// 加法运算
+console.log(30 === a + b);
+console.log("haha");
+
+// 减法运算
+console.log(-10 === a - b);
+console.log("hehe");
+
+var c = '.w', d = 'xs';
+console.log('.wxs' === c + d);
+console.log("null" === JSON.stringify(null));
+

@@ -1,0 +1,23 @@
+<!--pages/next/next.wxml-->
+<view class='bgView'>
+  <view class='topBgView'>
+    <image src='../../images/login_02.jpg' style='width:100%' mode='widthFix'></image>
+    <button wx:if="{{userInfo==null}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='userinfo'> 获取头像昵称 </button>
+    <view wx:else class='userinfo'>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+  <view class='inputBgView'>
+    <input class='inputBox' id='boxTop' placeholder='请输入手机号'></input>
+    <input class='inputBox' placeholder='请输入密码'></input>
+    <button class='loginBtn' hover-class='btnHover' bindtap='loginEvent'>登录</button>
+  </view>
+</view>
+
+<view class="mToast" style="display:{{mToast.display}};opacity:{{mToast.opacity}}">
+  <text>{{mToast.text}}</text>
+</view>
+
+<image class='logo' style="height:35px;" src="../../images/ic_logo_208x106.png" mode="aspectFit" />

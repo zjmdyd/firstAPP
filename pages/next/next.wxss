@@ -1,0 +1,84 @@
+/* pages/next/next.wxss */
+
+.bgView {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.topBgView {
+  position: relative;
+}
+
+.userinfo {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  text-align: center;
+}
+
+/** 输入框  **/
+
+.inputBgView {
+  margin: -40rpx 30rpx 30rpx 30rpx;
+  height: 400rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  z-index: 1;
+}
+
+#boxTop {
+  margin-top: 20rpx;
+}
+
+.loginBtn {
+  margin: 70rpx;
+  background-color: #154992;
+  color: #fff;
+}
+
+.btnHover {
+  background-color: #1854a9;
+  box-shadow: 0 0 2px 2px rgba(21, 73, 146, 0.2);
+}
+
+.logo {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/** 字体  **/
+/*  font:italic bold 12px/30px arial,sans-serif;
+      斜体   粗细    大小      字体
+　Sans-serif简介：Sans-serif是专指西文中没有衬线的字体，与汉字字体中的黑体相对应。
+  该类字体通常是机械的和统一线条的，它们往往拥有相同的曲率，笔直的线条，锐利的转角。*/
+
+/** 阴影  **/
+/*
+box-shadow: h-shadow v-shadow blur spread color inset;
+
+h-shadow	必需。水平阴影的位置。允许负值。	
+v-shadow	必需。垂直阴影的位置。允许负值。	
+blur	可选。模糊距离。	
+spread	可选。阴影的尺寸。	
+color	可选。阴影的颜色。请参阅 CSS 颜色值。	
+inset	可选。将外部阴影 (outset) 改为内部阴影。
+
+*/

@@ -1,0 +1,10 @@
+/* pages/03_form/03_form.wxss */
+.bgView {
+  display: flex;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+}

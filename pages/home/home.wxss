@@ -1,0 +1,37 @@
+/* pages/home/home.wxss */
+
+.title-bgView {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.rt-icon {
+  display: flex;
+}
+
+.rt-img {  
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%) 
+}
+
+.cell-detailText {
+  color: #999;
+  margin: 0px 16rpx;
+}
+
+#right-detailText {
+  flex: 1;
+  text-align: right;
+}
+
+.cell-subText {
+  color: #999;
+  margin-right: 16rpx;
+}
+
+/*
+background	在一个声明中设置所有的背景属性。
+background-color	设置元素的背景颜色。
+*/

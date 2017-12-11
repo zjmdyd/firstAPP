@@ -1,0 +1,13 @@
+<!--pages/home/home.wxml-->
+
+<view>
+  <view class='cell' wx:for='{{lists}}' bindtap='selectIndexEvent' data-index='{{index}}'>
+    <view class='title-bgView'>
+      <view>{{item}}</view>
+      <text class='cell-subText'>{{values[index]}}</text>
+    </view>
+    <view class="rt-icon">
+      <image class='rt-img' src="../../images/ic_youjian_34x34.png" mode="widthFix" style="width:12px;"/>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+/* pages/02_basic/02_basic.wxss */
+.group{
+  margin: 30rpx;
+}
+
+.progress {
+  margin-top: 30rpx;
+  background-color: red;
+}
