@@ -7,7 +7,8 @@
     "pages/01_view/01_view",
     "pages/02_basic/02_basic",
     "pages/03_form/03_form",
-    "pages/04_media/04_media"
+    "pages/04_media/04_media",
+    "pages/05_livePlay/05_livePlay"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,19 +1,11 @@
-// pages/home/home.js
+// pages/05_livePlay/05_livePlay.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    lists: ['视图容器', '基础内容', '表单组件', '媒体组件', '实时音视屏'],
-    values: [
-      ['movable-view', 'cover-view'].join(' '), 
-      ['icon', 'rich-text', 'progress'].join(' '),
-      ['checkbox', 'picker', 'radio'].join(' '),
-      ['audio', 'video', 'radio', 'camera'].join(' '),
-      ['livePlay'].join(' '),
-    ],
-    pgs: ['01_view', '02_basic', '03_form', '04_media', '05_livePlay']
+  
   },
 
   /**
@@ -23,13 +15,8 @@ Page({
   
   },
 
-  selectIndexEvent: function (e) {
-    var that = this
+  statechange: function(e) {
 
-    let pg = that.data.pgs[e.currentTarget.dataset.index]
-    wx.navigateTo({
-      url: '../' + pg + '/' + pg,
-    })
   },
 
   /**

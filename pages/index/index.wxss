@@ -1,5 +1,5 @@
 /**index.wxss**/
-  @import "../logs/logs.wxss";
+@import "../logs/logs.wxss";
 
 .userinfo {
   display: flex;
@@ -23,5 +23,5 @@
 }
 
 .nextBtn {
-margin-top: 100rpx;
+  margin-top: 100rpx;
 }

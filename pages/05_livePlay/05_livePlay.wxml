@@ -1,0 +1,3 @@
+<!--pages/05_livePlay/05_livePlay.wxml-->
+<view>实时音频</view>
+<live-player src="https://domain/pull_stream" mode="RTC" autoplay bindstatechange="statechange"></live-player>

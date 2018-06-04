@@ -31,6 +31,10 @@
   margin-right: 16rpx;
 }
 
+.test-view .test-subview text {
+  color: red;
+}
+
 /*
 background	在一个声明中设置所有的背景属性。
 background-color	设置元素的背景颜色。
