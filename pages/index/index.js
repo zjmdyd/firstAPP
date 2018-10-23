@@ -64,7 +64,7 @@ Page({
 
   nextPage: function () {
     wx.navigateTo({
-      url: '../next/next',
+      url: '../home/home',
     })
   },
 

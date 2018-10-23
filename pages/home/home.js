@@ -1,4 +1,8 @@
 // pages/home/home.js
+const radixtool = require('../../lib/radix.js')
+const viewtool = require('../../lib/view.js')
+const datetool = require('../../lib/date.js')
+
 Page({
 
   /**
@@ -20,7 +24,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // var tt = radixtool.hexStr2UInts('0a10')
+    // var ss = radixtool.uint8Array2Buffer(tt)
+    // console.log(tt, ss)
+    // var v = radixtool.arrayBuffer2HexStr(ss)
+    // console.log(v)
+    // var pg = viewtool.prePage()
+    // console.log(pg)
+    viewtool.showMention('加载成功', true)
+    // console.log(datetool.dateWithDaySpan(1))
+    console.log(datetool.currentTimestamp())
   },
 
   selectIndexEvent: function (e) {

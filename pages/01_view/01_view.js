@@ -1,6 +1,6 @@
 // pages/01_view/01_view.js
+const viewtool = require('../../lib/view.js')
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -13,7 +13,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log(getCurrentPages())
+    var pg = viewtool.getPageAtIndex(1)
+    console.log(pg)
   }, 
 
   tap: function (e) {
